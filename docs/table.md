@@ -35,13 +35,13 @@ group:
 | cellStyle            | 给单元格附加样式                                       | object \| function(row, column, rowIndex, columnIndex) | -      |
 | spanMethod           | 合并行或列的计算方法                                   | function({row, column, rowIndex, columnIndex})         | -      |
 | rowDraggable         | 是否开启列表数据拖拽排序                               | boolean                                                | -      |
-| rowSelection         | 列表项是否可选择，[配置项](#rowSelection)              | object                                                 | -      |
-| rowHighlight         | 列表行高亮选中，[配置项](#rowHighlight)                | object                                                 | -      |
+| rowSelection         | 列表项是否可选择，[配置项](#row_selection)             | object                                                 | -      |
+| rowHighlight         | 列表行高亮选中，[配置项](#row_highlight)               | object                                                 | -      |
 | expandable           | 展开行配置项，[配置项](#expandable)                    | object                                                 | -      |
 | summation            | 表格合计，包含底部合计和分组合计，[配置项](#summation) | array                                                  | -      |
 | footRender           | 表格底部自定义渲染                                     | function(columns, tableData, tableFullData): JSX Node  | -      |
 | multipleSort         | 是否为多列排序模式                                     | boolean                                                | true   |
-| authConfig           | 表格权限配置，[配置项](#authConfig)                    | object                                                 | -      |
+| authConfig           | 表格权限配置，[配置项](#auth_config)                   | object                                                 | -      |
 | paginationConfig     | 分页参数的详细配置，[配置项](#pagination)              | object                                                 | -      |
 | webPagination        | 是否为前端内存分页                                     | boolean                                                | -      |
 | scrollPagination     | 是否为滚动分页，滚动条触底后进行分页加载               | boolean                                                | -      |
@@ -49,8 +49,8 @@ group:
 | topSpaceAlign        | 顶部按钮插槽的对其方式                                 | left \| right                                          | right  |
 | showFullScreen       | 是否显示全屏按钮                                       | boolean                                                | true   |
 | showRefresh          | 是否显示刷新按钮                                       | boolean                                                | true   |
-| exportExcel          | 导出表格数据，[配置项](#exportExcel)                   | object                                                 | -      |
-| tablePrint           | 表格打印，[配置项](#tablePrint)                        | object                                                 | -      |
+| exportExcel          | 导出表格数据，[配置项](#export_excel)                  | object                                                 | -      |
+| tablePrint           | 表格打印，[配置项](#table_print)                       | object                                                 | -      |
 | showSelectCollection | 是否显示行选合集                                       | boolean                                                | true   |
 | showSuperSearch      | 是否显示高级检索                                       | boolean                                                | true   |
 | showGroupSummary     | 是否显示分组汇总                                       | boolean                                                | true   |
@@ -107,12 +107,12 @@ group:
 | sorter       | 列排序                                         | boolean \| func                                            | -      |
 | filter       | 列筛选，[配置项](#filter)                      | object                                                     | -      |
 | precision    | 数值类型字段的精度                             | number                                                     | -      |
-| formatType   | 字段的格式化类型，[配置项](#formatType)        | string                                                     | -      |
+| formatType   | 字段的格式化类型，[配置项](#format_type)       | string                                                     | -      |
 | required     | 可编辑列是否必填                               | boolean                                                    | -      |
 | editRender   | 可编辑单元格，返回值请参考 [配置项](#editable) | function(row, column): object                              | -      |
 | dictItems    | 数据字典配置，[配置项](#item)                  | array                                                      | -      |
-| summation    | 底部合计，[配置项](#columnSummation)           | object                                                     | -      |
-| groupSummary | 分组汇总，[配置项](#columnGroupSummary)        | object                                                     | -      |
+| summation    | 底部合计，[配置项](#column_summation)          | object                                                     | -      |
+| groupSummary | 分组汇总，[配置项](#column_group_summary)      | object                                                     | -      |
 | headRender   | 表头单元格渲染方法                             | function(column, tableData, tableFullData): JSX Node       | -      |
 | render       | 列渲染方法                                     | function(text, row, column, rowIndex, cellIndex): JSX Node | -      |
 
@@ -129,12 +129,12 @@ group:
 
 ### filter
 
-| 参数  | 说明                                        | 类型   | 默认值 |
-| ----- | ------------------------------------------- | ------ | ------ |
-| type  | 列筛选类型，[配置项](#filterType)，必要参数 | string | -      |
-| items | 筛选列表项，[配置项](#item)                 | array  | -      |
+| 参数  | 说明                                         | 类型   | 默认值 |
+| ----- | -------------------------------------------- | ------ | ------ |
+| type  | 列筛选类型，[配置项](#filter_type)，必要参数 | string | -      |
+| items | 筛选列表项，[配置项](#item)                  | array  | -      |
 
-### filterType
+### filter_type
 
 | 参数     | 说明                       |
 | -------- | -------------------------- |
@@ -149,7 +149,7 @@ group:
 
 | 参数     | 说明                                          | 类型                | 默认值 |
 | -------- | --------------------------------------------- | ------------------- | ------ |
-| type     | 可编辑类型，[配置项](#editType)，必要参数     | string              | -      |
+| type     | 可编辑类型，[配置项](#edit_type)，必要参数    | string              | -      |
 | items    | 下拉框的列表项，[配置项](#item)               | array               | -      |
 | editable | 是否可编辑                                    | boolean             | -      |
 | disabled | 是否禁用编辑功能，且禁止切换                  | boolean             | -      |
@@ -160,7 +160,7 @@ group:
 | onChange | 表单的 change 事件                            | function(cell, row) | -      |
 | onEnter  | 表单的 enter 事件                             | function(cell, row) | -      |
 
-### editType
+### edit_type
 
 | 参数                   | 说明            |
 | ---------------------- | --------------- |
@@ -176,7 +176,7 @@ group:
 | datetime               | 日期-时间类型   |
 | time                   | 时间类型        |
 
-### formatType
+### format_type
 
 | 参数              | 说明          |
 | ----------------- | ------------- |
@@ -218,23 +218,23 @@ group:
 | 参数             | 说明                                                                          | 类型                             | 默认值 |
 | ---------------- | ----------------------------------------------------------------------------- | -------------------------------- | ------ |
 | filters          | 顶部筛选条件配置，参考 TopFilter 组件，必要参数                               | array                            | -      |
-| table            | 列表组件配置，[配置项](#helperTable)，必要参数                                | array                            | -      |
+| table            | 列表组件配置，[配置项](#helper_table)，必要参数                               | array                            | -      |
 | initialValue     | 筛选条件初始值                                                                | object                           | -      |
 | width            | 搜索帮助面板宽度                                                              | number \| string                 | -      |
 | closeRemoteMatch | 关闭服务端匹配功能                                                            | boolean                          | -      |
-| fieldAliasMap    | 表单字段与回传数据字段的映射，[配置项](#fieldAlias)， 必要参数                | function(): object \| object     | -      |
+| fieldAliasMap    | 表单字段与回传数据字段的映射，[配置项](#field_alias)， 必要参数               | function(): object \| object     | -      |
 | filterAliasMap   | 输入框与筛选器条件的映射，返回 筛选器 fieldName 列表                          | function(): string[] \| string[] | -      |
 | beforeOpen       | 打开搜索帮助的前置钩子，若返回 false 或者返回 Promise 且被 reject，则阻止打开 | function(cell, row, column)      | -      |
 | closed           | 关闭搜索帮助的后置钩子                                                        | function(row)                    | -      |
 
-### helperTable
+### helper_table
 
 | 参数    | 说明                        | 类型   | 默认值 |
 | ------- | --------------------------- | ------ | ------ |
 | columns | 同 Table，[配置项](#column) | array  | -      |
 | fetch   | 同 Table，[配置项](#fetch)  | object | -      |
 
-### fieldAlias
+### field_alias
 
 | 属性名 key            | 属性值 value |
 | --------------------- | ------------ |
@@ -252,11 +252,11 @@ group:
 
 | 参数       | 说明                                         | 类型                    | 默认值 |
 | ---------- | -------------------------------------------- | ----------------------- | ------ |
-| groupItems | 分组小计，[配置项](#groupSubtotal)           | array                   | -      |
+| groupItems | 分组小计，[配置项](#group_subtotal)          | array                   | -      |
 | fetch      | 从服务端获取底部合计的数据，[配置项](#fetch) | object                  | -      |
 | onChange   | 字段合计变化时触发                           | function(summationRows) | -      |
 
-### columnSummation
+### column_summation
 
 | 参数                 | 说明                                                | 类型                          | 默认值 |
 | -------------------- | --------------------------------------------------- | ----------------------------- | ------ |
@@ -266,7 +266,7 @@ group:
 | unit                 | 合计字段的单位                                      | string                        | -      |
 | render               | 自定义渲染合计值                                    | function(tableData): JSX Node | -      |
 
-### columnGroupSummary
+### column_group_summary
 
 | 参数    | 说明                                                | 类型                 | 默认值 |
 | ------- | --------------------------------------------------- | -------------------- | ------ |
@@ -274,7 +274,7 @@ group:
 | unit    | 合计字段的单位                                      | string               | -      |
 | render  | 合计单元格自定义渲染                                | function(): JSX Node | -      |
 
-### groupSubtotal
+### group_subtotal
 
 | 参数            | 说明                                                                                | 类型   | 默认值 |
 | --------------- | ----------------------------------------------------------------------------------- | ------ | ------ |
@@ -283,7 +283,7 @@ group:
 | color           | 小计行的文本颜色                                                                    | string | -      |
 | backgroundColor | 小计行的背景颜色                                                                    | string | -      |
 
-### rowSelection
+### row_selection
 
 | 参数                   | 说明                                                                     | 类型                                   | 默认值 |
 | ---------------------- | ------------------------------------------------------------------------ | -------------------------------------- | ------ |
@@ -299,7 +299,7 @@ group:
 | disabled               | 是否允许行选择                                                           | function(row): boolean                 | -      |
 | onChange               | 选中项发生变化时触发                                                     | function(selectionKeys, selectionRows) | -      |
 
-### rowHighlight
+### row_highlight
 
 | 参数          | 说明                 | 类型                                | 默认值 |
 | ------------- | -------------------- | ----------------------------------- | ------ |
@@ -330,13 +330,13 @@ group:
 | showSizeChanger | 是否展示 pageSize 切换器 | boolean  | -                    |
 | showQuickJumper | 是否可以快速跳转至某页   | boolean  | -                    |
 
-### authConfig
+### auth_config
 
-| 参数  | 说明                                 | 类型   | 默认值 |
-| ----- | ------------------------------------ | ------ | ------ |
-| fetch | 获取权限的接口，[配置项](#authFetch) | object | -      |
+| 参数  | 说明                                  | 类型   | 默认值 |
+| ----- | ------------------------------------- | ------ | ------ |
+| fetch | 获取权限的接口，[配置项](#auth_fetch) | object | -      |
 
-### authFetch
+### auth_fetch
 
 | 参数          | 说明                                                  | 类型   | 默认值 |
 | ------------- | ----------------------------------------------------- | ------ | ------ |
@@ -346,7 +346,7 @@ group:
 | exportDataKey | 导出权限的数据路径，值为数字 1 或 0                   | string | -      |
 | printDataKey  | 打印权限的数据路径，为数字 1 或 0                     | string | -      |
 
-### exportExcel
+### export_excel
 
 | 参数      | 说明                                         | 类型    | 默认值                |
 | --------- | -------------------------------------------- | ------- | --------------------- |
@@ -354,7 +354,7 @@ group:
 | fetch     | 导出文件的接口(服务端导出)，[配置项](#fetch) | object  | -                     |
 | cellStyle | 是否给单元格添加样式                         | boolean | -                     |
 
-### tablePrint
+### table_print
 
 | 参数     | 说明                | 类型    | 默认值 |
 | -------- | ------------------- | ------- | ------ |
