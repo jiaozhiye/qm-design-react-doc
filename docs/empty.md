@@ -3,6 +3,7 @@ title: Empty 空状态
 nav:
   title: 组件
   path: /components
+  order: 2
 group:
   title: 组件列表
 ---

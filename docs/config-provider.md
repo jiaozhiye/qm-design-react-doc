@@ -3,6 +3,7 @@ title: ConfigProvider 配置
 nav:
   title: 组件
   path: /components
+  order: 2
 group:
   title: 配置
 ---

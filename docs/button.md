@@ -3,6 +3,7 @@ title: Button 按钮
 nav:
   title: 组件
   path: /components
+  order: 2
 group:
   title: 组件列表
 ---
@@ -13,7 +14,7 @@ group:
 
 ### 防止重复提交
 
-```jsx
+```tsx
 import React from 'react';
 import { QmButton } from '@jiaozhiye/qm-design-react';
 
@@ -38,7 +39,7 @@ export default class ButtonDemo extends React.Component {
 
 ### 确认提示
 
-```jsx
+```tsx
 import React from 'react';
 import { QmButton } from '@jiaozhiye/qm-design-react';
 

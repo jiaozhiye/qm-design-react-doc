@@ -3,6 +3,7 @@ title: Split 分割面板
 nav:
   title: 组件
   path: /components
+  order: 2
 group:
   title: 组件列表
 ---
