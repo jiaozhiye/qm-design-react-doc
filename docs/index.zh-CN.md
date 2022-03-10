@@ -1,4 +1,5 @@
 ---
+title: QmDesign
 hero:
   title: QmDesign
   desc: 🏆 让中后台开发更简单
@@ -10,7 +11,7 @@ features:
     title: 简单易用
     desc: 组件参数都是 Json 驱动的形式设计的，开发更容易上手
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d1ee0c6f-5aed-4a45-a507-339a4bfe076c/k7bjsocq_w144_h144.png
-    title: Ant Design
+    title: 设计价值观
     desc: 与 Ant Design 设计体系一脉相承，无缝对接 antd 项目
   - icon: https://gw.alipayobjects.com/zos/antfincdn/Eb8IHpb9jE/Typescript_logo_2020.svg
     title: TypeScript
