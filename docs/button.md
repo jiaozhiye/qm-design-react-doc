@@ -14,53 +14,12 @@ group:
 
 ### 防止重复提交
 
-```tsx
-import React from 'react';
-import { QmButton } from '@jiaozhiye/qm-design-react';
-
-const sleep = async (delay) => {
-  return new Promise((resolve) => setTimeout(resolve, delay));
-};
-
-export default class ButtonDemo extends React.Component {
-  clickHandle = async () => {
-    await sleep(1000);
-  };
-
-  render() {
-    return (
-      <QmButton type="primary" click={this.clickHandle}>
-        提交
-      </QmButton>
-    );
-  }
-}
-```
+<code src="../demos/button/index1" />
 
 ### 确认提示
 
-```tsx
-import React from 'react';
-import { QmButton } from '@jiaozhiye/qm-design-react';
+<code src="../demos/button/index2" />
 
-const sleep = async (delay) => {
-  return new Promise((resolve) => setTimeout(resolve, delay));
-};
-
-export default class ButtonDemo extends React.Component {
-  clickHandle = async () => {
-    await sleep(1000);
-    console.log('删除成功！');
-  };
-
-  render() {
-    return (
-      <QmButton type="danger" confirm={{}} click={this.clickHandle}>
-        删除
-      </QmButton>
-    );
-  }
-}
 ```
 
 ## API
@@ -81,3 +40,4 @@ export default class ButtonDemo extends React.Component {
 | title     | 提示内容           | string   | 确认执行删除吗？ |
 | onConfirm | 点击确认按钮时触发 | function | -                |
 | onCancel  | 点击取消按钮时触发 | function | -                |
+```
