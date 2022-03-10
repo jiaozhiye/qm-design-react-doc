@@ -20,8 +20,6 @@ group:
 
 <code src="../demos/button/index2" />
 
-```
-
 ## API
 
 ### Button
@@ -40,4 +38,7 @@ group:
 | title     | 提示内容           | string   | 确认执行删除吗？ |
 | onConfirm | 点击确认按钮时触发 | function | -                |
 | onCancel  | 点击取消按钮时触发 | function | -                |
+
+```
+
 ```
