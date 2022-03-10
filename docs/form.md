@@ -135,12 +135,12 @@ group:
 ### rules
 
 | 参数      | 说明           | 类型                            | 默认值 |
-| --------- | -------------- | ------------------------------- | ------ | --- |
+| --------- | -------------- | ------------------------------- | ------ |
 | required  | 是否必填       | boolean                         | -      |
 | message   | 提示信息       | string                          | -      |
 | min       | 最小长度       | number                          | -      |
 | max       | 最大长度       | number                          | -      |
-| pattern   | 正则表达式匹配 | RegExp                          | -      | s   |
+| pattern   | 正则表达式匹配 | RegExp                          | -      |
 | validator | 自定义校验方法 | function(rule, value, callback) | -      |
 
 注意：其他参数请参考 https://ant.design/components/form-cn/#API

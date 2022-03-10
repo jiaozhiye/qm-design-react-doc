@@ -1,8 +1,8 @@
 /*
  * @Author: 焦质晔
  * @Date: 2022-03-10 12:35:49
- * @Last Modified by:   焦质晔
- * @Last Modified time: 2022-03-10 12:35:49
+ * @Last Modified by: 焦质晔
+ * @Last Modified time: 2022-03-10 13:44:39
  */
 const path = require('path');
 import { defineConfig } from 'dumi';
@@ -11,6 +11,7 @@ export default defineConfig({
   title: '技术平台文档',
   mode: 'site',
   hash: true,
+  history: { type: 'hash' },
   locales: [['zh-CN', '中文']],
   favicon: '/favicon.ico',
   logo: '/assets/img/logo.png',
