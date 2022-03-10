@@ -22,11 +22,12 @@
   },
   "devDependencies": {
     "dumi": "^1.0.13",
+    "less-loader": "^10.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@jiaozhiye/qm-design-react": "^1.0.0-beta.28"
+    "@jiaozhiye/qm-design-react": "^1.0.0-beta.29"
   }
 }
